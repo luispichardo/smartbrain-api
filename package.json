@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "serve -s build"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "knex": "^0.95.11",
     "nodemon": "^2.0.12",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "serve": "^12.0.1"
   }
 }
