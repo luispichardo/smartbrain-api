@@ -69,7 +69,10 @@ app.use(cors());
 // };
 
 app.get("/", (req, res) => {
-  res.send("it is working!");
+  db.select("*")
+    .from("users")
+    .then((users) => res.json(users))
+    .catch((err) => res.status(400).json("unable to get users"));
 });
 
 app.post("/signin", (req, res) => signin.handleSignIn(req, res, db, bcrypt));
